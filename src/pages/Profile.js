@@ -72,13 +72,13 @@ const {user}=useContext(Context)
     if (selectedImage) {
        postData();
     }
-  }, [postData]);
+  });
 
   useEffect(() => {
     if (selectedImage2) {
        postData2();
     }
-  }, [postData2]);
+  });
 
   useEffect(() => {
     if (url) {
