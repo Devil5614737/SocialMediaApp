@@ -1,0 +1,298 @@
+@import "./variables";
+
+.container {
+  margin-left: 99px;
+  margin-top: 92px;
+  position: absolute;
+
+  .post-container {
+    margin-bottom: 52px;
+
+    .post-box {
+      width: 450px;
+      height: 110px;
+      background: $card-color;
+      position: relative;
+
+      .input {
+        display: block;
+        width: 100%;
+        border: none;
+        background-color: $card-color;
+        padding: 0.6em;
+        color: white;
+        font-size: 1.8em;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .label {
+        color: white;
+
+        .icon {
+          height: 23px;
+          position: absolute;
+          right: 12px;
+          cursor: pointer;
+          bottom: 12px;
+        }
+      }
+
+      .input2 {
+        display: none;
+      }
+    }
+
+    .button {
+      color: white;
+      font-size: 2rem;
+      background-color: $blue;
+      width: 100px;
+      height: 33px;
+      text-align: center;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transform: translate(349px, 12px);
+    }
+  }
+}
+
+.card-container {
+  .card {
+    width: 450px;
+    height: auto;
+    background-color: $card-color;
+    margin-bottom: 62px;
+
+    .top {
+      padding: 0.8em 0.8em;
+      display: flex;
+      align-items: center;
+
+      .userimage {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        object-fit: cover;
+      }
+
+      .username {
+        color: white;
+        font-size: 1.6rem;
+        margin-left: 8px;
+      }
+    }
+
+    .postimage {
+      width: 450px;
+      object-fit: cover;
+    }
+
+    .post-stats {
+      padding: 0.8em 0.8em;
+
+      .icon {
+        height: 25px;
+        cursor: pointer;
+      }
+
+      .like-count {
+        color: white;
+        font-size: 1.6rem;
+      }
+
+      .comment {
+        color: white;
+        font-size: 1.5rem;
+
+        .comment-user {
+          color: white;
+          font-weight: 500;
+          font-size: 1.7rem;
+        }
+      }
+
+      .comment-container {
+        display: flex;
+        justify-content: space-between;
+
+        .comment {
+          display: block;
+          background-color: $input-color;
+          border: none;
+          width: 90%;
+          height: 30px;
+          padding: .3em;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .post-btn {
+          color: white;
+          cursor: pointer;
+          font-size: 1.6rem;
+          font-weight: bold;
+          color: $pink;
+        }
+      }
+    }
+  }
+}
+
+
+.heart {
+  background-color: black;
+  position: relative;
+  height: 15px;
+  width: 15px;
+  transform: rotate(-45deg) scale(1);
+  animation: pulse 1s linear infinite;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+
+
+.heart::after {
+  background: inherit;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 0;
+  height: 15px;
+  width: 15px;
+}
+
+.heart::before {
+  background: inherit;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -50%;
+  height: 15px;
+  width: 15px;
+}
+
+
+.friends-containers{
+  @media screen and (max-width:800px) {
+    display: none;
+  }
+  .title{
+    color: rgb(104, 101, 101);
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-left: 47px;
+    margin-bottom: 12px;
+  }
+
+  position: fixed;
+  width: 400px;
+  right: 140px;
+  top: 110px;
+  .containers{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -10px;
+    .lefts{
+      display: flex;
+      align-items: center;
+      img{
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        object-fit: cover;
+      }
+      .detail{
+        margin-left: 12px;
+        p{
+          color: white;
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+      }
+    }
+    #icon{
+      height: 35px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+
+
+.userInfo-modal{
+ height: 400px;
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: rgb(19, 19, 19);
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 10px rgba(0,0,0,.3);
+  border-radius: 20px;
+  // z-index: 999999;
+  .userInfo-container{
+    
+    img{
+      height: 300px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .user-info{
+      margin-top: -32px;
+      display: flex;
+      align-items: center;
+      margin-left: 12px;
+      img{
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 100%;
+      }
+      .user-data{
+        margin-left: 12px;
+        .data{
+          color: white;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+#close{
+  
+  object-fit: contain;
+
+ 
+  height: 25px;
+
+
+}
+
+.icon-container{
+  position: absolute;
+ right: 12px;
+  top: 12px;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 100%;
+  padding: .3em .3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

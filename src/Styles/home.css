@@ -1,0 +1,263 @@
+.container {
+  margin-left: 99px;
+  margin-top: 92px;
+  position: absolute;
+}
+.container .post-container {
+  margin-bottom: 52px;
+}
+.container .post-container .post-box {
+  width: 450px;
+  height: 110px;
+  background: #101010;
+  position: relative;
+}
+.container .post-container .post-box .input {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #101010;
+  padding: 0.6em;
+  color: white;
+  font-size: 1.8em;
+}
+.container .post-container .post-box .input:focus {
+  outline: none;
+}
+.container .post-container .post-box .label {
+  color: white;
+}
+.container .post-container .post-box .label .icon {
+  height: 23px;
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  bottom: 12px;
+}
+.container .post-container .post-box .input2 {
+  display: none;
+}
+.container .post-container .button {
+  color: white;
+  font-size: 2rem;
+  background-color: #00D9C0;
+  width: 100px;
+  height: 33px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transform: translate(349px, 12px);
+}
+
+.card-container .card {
+  width: 450px;
+  height: auto;
+  background-color: #101010;
+  margin-bottom: 62px;
+}
+.card-container .card .top {
+  padding: 0.8em 0.8em;
+  display: flex;
+  align-items: center;
+}
+.card-container .card .top .userimage {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-container .card .top .username {
+  color: white;
+  font-size: 1.6rem;
+  margin-left: 8px;
+}
+.card-container .card .postimage {
+  width: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-container .card .post-stats {
+  padding: 0.8em 0.8em;
+}
+.card-container .card .post-stats .icon {
+  height: 25px;
+  cursor: pointer;
+}
+.card-container .card .post-stats .like-count {
+  color: white;
+  font-size: 1.6rem;
+}
+.card-container .card .post-stats .comment {
+  color: white;
+  font-size: 1.5rem;
+}
+.card-container .card .post-stats .comment .comment-user {
+  color: white;
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+.card-container .card .post-stats .comment-container {
+  display: flex;
+  justify-content: space-between;
+}
+.card-container .card .post-stats .comment-container .comment {
+  display: block;
+  background-color: #181818;
+  border: none;
+  width: 90%;
+  height: 30px;
+  padding: 0.3em;
+}
+.card-container .card .post-stats .comment-container .comment:focus {
+  outline: none;
+}
+.card-container .card .post-stats .comment-container .post-btn {
+  color: white;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #DA627D;
+}
+
+.heart {
+  background-color: black;
+  position: relative;
+  height: 15px;
+  width: 15px;
+  transform: rotate(-45deg) scale(1);
+  -webkit-animation: pulse 1s linear infinite;
+          animation: pulse 1s linear infinite;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.heart::after {
+  background: inherit;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 0;
+  height: 15px;
+  width: 15px;
+}
+
+.heart::before {
+  background: inherit;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -50%;
+  height: 15px;
+  width: 15px;
+}
+
+.friends-containers {
+  position: fixed;
+  width: 400px;
+  right: 140px;
+  top: 110px;
+}
+@media screen and (max-width: 800px) {
+  .friends-containers {
+    display: none;
+  }
+}
+.friends-containers .title {
+  color: #686565;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-left: 47px;
+  margin-bottom: 12px;
+}
+.friends-containers .containers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: -10px;
+}
+.friends-containers .containers .lefts {
+  display: flex;
+  align-items: center;
+}
+.friends-containers .containers .lefts img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.friends-containers .containers .lefts .detail {
+  margin-left: 12px;
+}
+.friends-containers .containers .lefts .detail p {
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.friends-containers .containers #icon {
+  height: 35px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+
+.userInfo-modal {
+  height: 400px;
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #131313;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+.userInfo-modal .userInfo-container img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.userInfo-modal .userInfo-container .user-info {
+  margin-top: -32px;
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+}
+.userInfo-modal .userInfo-container .user-info img {
+  width: 90px;
+  height: 90px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+}
+.userInfo-modal .userInfo-container .user-info .user-data {
+  margin-left: 12px;
+}
+.userInfo-modal .userInfo-container .user-info .user-data .data {
+  color: white;
+  font-size: 1.5rem;
+}
+
+#close {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 25px;
+}
+
+.icon-container {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 100%;
+  padding: 0.3em 0.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=home.css.map */

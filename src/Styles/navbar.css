@@ -1,0 +1,78 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 10em;
+  width: 100%;
+  position: fixed;
+  z-index: 999999999999;
+}
+.navbar .logo {
+  color: #DA627D;
+  font-weight: bold;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.navbar .links {
+  display: flex;
+  margin-left: 12px;
+  align-items: center;
+}
+.navbar .links .search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 42px;
+}
+.navbar .links .search .input {
+  padding: 0.3em;
+  display: none;
+}
+.navbar .links .search .icon {
+  height: 25px;
+  cursor: pointer;
+}
+.navbar .links .link {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-right: 42px;
+  margin-left: 12px;
+}
+
+.avatar {
+  width: 25px;
+  height: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+}
+
+.logout-modal {
+  position: fixed;
+  right: 120px;
+  top: 70px;
+  padding: 0.5em 0.8em;
+  background-color: #101010;
+  cursor: pointer;
+  border-radius: 8px;
+  z-index: 133213221;
+}
+.logout-modal .logout {
+  color: white;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.active {
+  display: flex;
+  justify-content: space-between;
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
+          backdrop-filter: saturate(180%) blur(5px);
+  transition: box-shadow 0.2s ease 0s, background-color 0.2s;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.active1 {
+  display: block;
+}/*# sourceMappingURL=navbar.css.map */

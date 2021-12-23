@@ -1,0 +1,212 @@
+.container {
+  margin-top: 73px;
+  margin-left: 98px;
+  position: absolute;
+}
+.container .top-container {
+  width: 81.2vw;
+}
+.container .top-container img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .top-container .user-details {
+  display: flex;
+}
+.container .top-container .user-details img {
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  margin-top: -22px;
+  position: relative;
+  z-index: 313122;
+}
+.container .top-container .user-details .user-info {
+  margin-left: 12px;
+  color: white;
+}
+.container .top-container .user-details .user-info .username {
+  font-size: 1.8rem;
+  margin-bottom: 7px;
+}
+.container .top-container .user-details .user-info .friends-count {
+  font-size: 1.8rem;
+}
+.container .top-container .user-details .user-info .btn {
+  border: 1px solid white;
+  padding: 0.3em 1em;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.post-container {
+  margin-top: 32px;
+}
+.post-container .title {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.post-container .posts {
+  margin-top: 42px;
+  display: grid;
+  grid-template-columns: repeat(4, 260px);
+  grid-row-gap: 22px;
+  grid-column-gap: 22px;
+}
+@media screen and (max-width: 1200px) {
+  .post-container .posts {
+    grid-template-columns: repeat(3, 260px);
+  }
+}
+@media screen and (max-width: 900px) {
+  .post-container .posts {
+    grid-template-columns: repeat(2, 260px);
+    place-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .post-container .posts {
+    grid-template-columns: repeat(1, 260px);
+    place-items: center;
+    justify-content: center;
+  }
+}
+.post-container .posts .user-post {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+.post-container .posts .user-post:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+.post-container .posts .user-post:hover .user-stats {
+  opacity: 1;
+}
+.post-container .posts .user-post img {
+  width: 100%;
+  height: 380px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.post-container .posts .user-post .user-stats {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  transition: all 0.7s ease;
+  opacity: 0;
+}
+.post-container .posts .user-post .user-stats .like {
+  display: flex;
+  align-items: center;
+}
+.post-container .posts .user-post .user-stats .like .icon {
+  width: 20px;
+  height: 20px;
+}
+.post-container .posts .user-post .user-stats .like .like-count {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 7px;
+}
+.post-container .posts .user-post .user-stats .comment {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+}
+.post-container .posts .user-post .user-stats .comment .icon {
+  width: 20px;
+  height: 20px;
+}
+.post-container .posts .user-post .user-stats .comment .like-count {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 7px;
+}
+
+.userpic-container {
+  position: relative;
+}
+.userpic-container label {
+  position: absolute;
+  bottom: 12px;
+  right: -42px;
+}
+.userpic-container label #camera {
+  height: 35px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+.userpic-container input {
+  display: none;
+}
+
+.cover {
+  position: relative;
+  z-index: 32212;
+}
+.cover label {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.cover label #icon {
+  height: 35px;
+  cursor: pointer;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.cover input {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 13212132;
+  height: 200px;
+  width: 200px;
+  background-color: #0e0e10;
+  padding: 5em 0.6em;
+  color: white;
+  border-radius: 16px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+}
+.modal .input {
+  padding: 0.4em 0.5em;
+  width: 100%;
+  display: block;
+  margin-bottom: 12px;
+  background-color: #0e0e10;
+  border: none;
+  color: white;
+  font-size: 1.7rem;
+}
+.modal .input:focus {
+  outline: none;
+}
+.modal .btn {
+  font-size: 1.8rem;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+.modal .btn:nth-of-type(2) {
+  color: red;
+}/*# sourceMappingURL=profile.css.map */

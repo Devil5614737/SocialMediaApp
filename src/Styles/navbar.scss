@@ -1,0 +1,80 @@
+@import "./variables";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 10em;
+  width: 100%;
+  position: fixed;
+  z-index: 999999999999;
+
+  .logo {
+    color: $pink;
+    font-weight: bold;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .links {
+    display: flex;
+    margin-left: 12px;
+    align-items: center;
+    .search {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-right: 42px;
+      .input {
+        padding: 0.3em;
+        display: none;
+      }
+      .icon {
+        height: 25px;
+        cursor: pointer;
+      }
+    }
+    .link {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-right: 42px;
+      margin-left: 12px;
+    }
+  }
+}
+
+.avatar {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.logout-modal {
+  position: fixed;
+  right: 120px;
+  top: 70px;
+  padding: 0.5em 0.8em;
+  background-color: $card-color;
+  cursor: pointer;
+  border-radius: 8px;
+  z-index: 133213221;
+
+  .logout {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+}
+
+.active {
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: saturate(180%) blur(5px);
+  transition: box-shadow 0.2s ease 0s, background-color 0.2s;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.active1 {
+  display: block;
+}
