@@ -6,8 +6,11 @@ import Card from "../components/Card";
 import axios from "axios";
 import Request from "../assets/request.svg";
 import Close from "../assets/close.svg";
+import {Context} from '../Context';
+import {useContext} from 'react';
 
 function Home() {
+  const {user}=useContext(Context);
   const [posts, setPosts] = useState([]);
   const [selectedImage, setSelectedImage] = useState("");
   const [title, setTitle] = useState("");
@@ -101,6 +104,10 @@ function Home() {
     }).then(res=>res.json()).then(data=>setRecentComment(data.comments)).catch(e=>console.log(e))
   };
 
+const filteredUser=users.filter(item=>{
+return item._id!==user._id
+})
+
 
   return (
     <>
@@ -152,7 +159,7 @@ function Home() {
         </div>
         <div className="friends-containers">
           <p className="title">People you may know</p>
-          {users.map((user) => (
+          {filteredUser.map((user) => (
             <div className="containers">
               <div className="lefts">
                 <img src={user.pic} alt="user" />

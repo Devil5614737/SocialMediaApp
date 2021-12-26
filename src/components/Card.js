@@ -15,7 +15,7 @@ export default function Card({
 
 }) {
     
-    console.log(comments)
+
   return (
     <div className="card">
       <div className="top">
